@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup and Login with LocalStorage</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.6/dist/sweetalert2.min.css">
+  <link rel="stylesheet" href="11Nov.css">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Signup Form -->
+    <div id="signup-form">
+      <h2>Signup</h2>
+      <form id="signup" onsubmit="return validateSignup()">
+        <label for="signup-email">Email:</label>
+        <input type="email" id="signup-email" name="email" required>
+        <span id="signup-email-error" class="error-message"></span>
+
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" name="password" required>
+        <span id="signup-password-error" class="error-message"></span>
+
+        <label for="signup-confirm-password">Confirm Password:</label>
+        <input type="password" id="signup-confirm-password" name="confirm-password" required>
+        <span id="signup-confirm-password-error" class="error-message"></span>
+
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form">
+      <h2>Login</h2>
+      <form id="login" onsubmit="return validateLogin()">
+        <label for="login-email">Email:</label>
+        <input type="email" id="login-email" name="email" required>
+        <span id="login-email-error" class="error-message"></span>
+
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required>
+        <span id="login-password-error" class="error-message"></span>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.6/dist/sweetalert2.min.js"></script>
+  <script src="11Nov.js"></script>
+</body>
+</html>
